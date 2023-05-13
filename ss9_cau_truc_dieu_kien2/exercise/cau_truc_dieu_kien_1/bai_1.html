@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tính chia hết</h2>
+<input type="number" id="numb1"  placeholder="Nhập số">
+<input type="number" id="numb2" placeholder="Nhập số">
+<button onclick="something()">kết quả</button>
+<br><br>
+<p>Kết quả </p>
+<div id="ketqua"></div>
+
+</body>
+<script>
+    function something() {
+        let result = (+document.getElementById('numb1').value) % (+document.getElementById('numb2').value);
+        if (result == 0){
+            alert( 'chia hết')
+        }
+        else {
+            alert( 'không chia hết')
+        }
+    }
+</script>
+</html>

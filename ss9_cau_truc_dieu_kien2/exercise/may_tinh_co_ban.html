@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<input type="number" id="view" style="width: 10%"/>
+<br>
+<br>
+ <table cellspacing="4">
+    <tr>
+        <td><input type="button" name="btn" value="1" onclick="inputValue(this.value)"></td>
+        <td><input type="button" name="btn" value="2" onclick="inputValue(this.value)"></td>
+        <td><input type="button" name="btn" value="3" onclick="inputValue(this.value)"></td>
+        <td><input type="button" name="op" value="+" onclick="inputValue(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" name="btn" value="4" onclick="inputValue(this.value)"></td>
+        <td><input type="button" name="btn" value="5" onclick="inputValue(this.value)"></td>
+        <td><input type="button" name="btn" value="6" onclick="inputValue(this.value)"></td>
+        <td><input type="button" name="op" value="-" onclick="inputValue(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" name="btn" value="7" onclick="inputValue(this.value)"></td>
+        <td><input type="button" name="btn" value="8" onclick="inputValue(this.value)"></td>
+        <td><input type="button" name="btn" value="9" onclick="inputValue(this.value)"></td>
+        <td><input type="button"  name="op" value="*" onclick="inputValue(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="AC" onclick="delete()"></td>
+        <td><input type="button" name="btn" value="0" onclick="inputValue(this.value)"></td>
+        <td><button name="result" onclick="result();">=</button></td>
+        <td><input type="button" name="op" value="/" onclick="inputValue(this.value)"></td>
+    </tr>
+</table>
+</body>
+<script>
+    // let view = document.getElementById("view");
+    // function inputValue(value) {
+    //     view.value += value;
+    // }
+    let view = document.getElementById("view");
+    function inputValue(value) {
+        view.value += value;
+    }
+    function result() {
+        let result = eval(view.value);
+        view.value = result;
+    }
+
+
+</script>
+</html>

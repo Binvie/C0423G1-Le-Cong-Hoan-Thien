@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="doc()">
+<img id="ball"
+     src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png"
+     style="position:absolute;left:0; top:0;">
+</body>
+<!--<body onload="doc()">-->
+<!--<img id="ball" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" style="position:absolute;left:0; top:0;" height="100" width="80"/>-->
+<!--</body>-->
+<script>
+    function upArrowpressed() {
+        var goup = document.getElementById("ball");
+        goup.style.top = parseInt(goup.style.top) - 5 + 'px'
+    }
+
+    function downArrowpressed() {
+        var godown = document.getElementById('ball');
+        godown.style.top = parseInt(godown.style.top) + 5 + 'px'
+    }
+
+    function leftArrowPressed() {
+        var goleft = document.getElementById('ball');
+        goleft.style.left = parseInt(goleft.style.left) - 5 + 'px'
+    }
+
+    function rightArrowPressed() {
+        var goright = document.getElementById('ball')
+        goright.style.left = parseInt(goright.style.left) + 5 + 'px'
+    }
+
+    function moveselection(evt) {
+        console.log(evt.keyCode)
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 38:
+                upArrowpressed()
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 40:
+                downArrowpressed()
+                break;
+        }
+    }
+
+    function doc() {
+        window.addEventListener('keydown', moveselection);
+    }
+</script>
+
+</html>

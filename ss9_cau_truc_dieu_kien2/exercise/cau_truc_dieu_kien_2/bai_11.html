@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('nhập thu nhập tháng');
+    while (isNaN(a)){
+        a = +prompt('vui lòng nhập lại');
+    }
+    if (a<10000000) {
+        alert('bạn không cần phải đóng thuế')
+    } else if (a<20000000){
+        alert('số tiền bạn phải đóng thuế là :' + ((a - 10000000)*0.1))
+    }else {
+        alert('số tiền bạn phải đóng thuế là :' + ((a - 10000000)*0.15))
+    }
+</script>
+</body>
+</html>
