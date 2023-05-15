@@ -11,10 +11,10 @@
 //     document.write('Điểm trung bình' + sum);
 
 
-     inputdoc = prompt('nhập giá trị độ C')
-    let doC = parseFloat(inputdoc)
+     inputDoc = prompt('nhập giá trị độ C');
+    let doC = parseFloat(inputDoc);
     dof = ((9*doC)/5) + 32;
-    document.write('độ F là:' + dof +' độ F')
+    document.write('độ F là:' + dof +' độ F');
 
 
 // bài 3

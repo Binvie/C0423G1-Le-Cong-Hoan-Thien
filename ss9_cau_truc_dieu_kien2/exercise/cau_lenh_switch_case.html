@@ -7,26 +7,26 @@
 <body>
 <h1>Kiểm tra số ngày trong tháng</h1>
 <br>
-<input type="number" id="so" placeholder="Nhập tháng" >
-<input type="button"  value="Tính số ngày" onclick="happenedxxx()">
+<input type="number" id="so" placeholder="Nhập tháng" >;
+<input type="button"  value="Tính số ngày" onclick="happenedxxx()">;
 <br>
 <br>
-<div id="ketqua">Đây là chỗ hiển thị kết quả</div>
+<div id="ketQua">Đây là chỗ hiển thị kết quả</div>;
 
 
 <script>
     function happenedxxx() {
-        let date = +document.getElementById("so").value
+        let date = +document.getElementById("so").value;
         let thangs = '';
         switch (date) {
             case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-                thangs = '31 ngày'
+                thangs = '31 ngày';
                 break;
             case 4: case 6: case 9: case 1:
-                thangs = '30 ngày'
+                thangs = '30 ngày';
                 break;
             case 2:
-                thangs = '28 ngày or 29 ngay'
+                thangs = '28 ngày or 29 ngay';
         }
         document.getElementById('ketqua').innerHTML = `tháng ${date} có ${thangs}`;
     }
