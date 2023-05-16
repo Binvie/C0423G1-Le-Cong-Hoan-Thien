@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soTienVay = +prompt(' Nhập số tiền cần vay');
+    let thang = +prompt('Nhập số tháng');
+    let n =0;
+    let gocThang = soTienVay/thang
+    for (i=1; i <= thang; i++){
+        n = soTienVay * 3/100 + gocThang;
+    document.write('Số tiền phải đóng hằng tháng là : ' + n + '<br/>');
+    }
+</script>
+</body>
+</html>

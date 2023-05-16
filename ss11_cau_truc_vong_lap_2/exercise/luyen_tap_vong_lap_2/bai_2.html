@@ -7,10 +7,11 @@
 <body>
 <script>
     let num = +prompt(' nhập số để tính số nguyên dương');
-    let giaoThua = 0 ;
-    for (i=0; i<num; i++){
-        giaoThua =
+    let giaiThua = 1;
+    for (i = 1; i <= num; i++) {
+        giaiThua *= i;
     }
+    document.write('giai thừa của ' + num +' là ' +  giaiThua);
 </script>
 </body>
 </html>

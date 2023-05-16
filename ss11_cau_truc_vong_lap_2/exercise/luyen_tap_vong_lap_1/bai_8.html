@@ -9,12 +9,19 @@
 <input type="button" id="batDau" value="Bắt đầu" onclick="doSomething()">
 
 <script>
-    let num = '';
+    let num = 0;
+    let endPoint = 0;
+    let headPoint = 0;
+    let randomNumber = 0;
     function doSomething() {
-       num = prompt('Số muốn đoán trong khoảng nào?');
-        for(i=0; i<5; i++){
-
+      headPoint=+prompt(' nhập số trong khoảng từ ');
+      endPoint=+prompt('đến');
+      randomNumber = Math.random() * (endPoint - headPoint) + headPoint;
         }
+
+    for (let i = 0; i < 3 ; i++) {
+
+    }
     }
 </script>
 </body>
