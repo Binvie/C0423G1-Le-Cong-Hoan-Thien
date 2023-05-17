@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhập số phần từ ');
+    let arr = [];
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt('nhập phần từ thứ ' + (i + 1));
+    }
+    for (let i = 0; i < n; i++) {
+        if (arr[i] < 0) {
+            count++
+        }
+    }
+    document.write('Số nguyên âm trong mảng là : ' + count);
+    console.log(count)
+
+</script>
+</body>
+</html>

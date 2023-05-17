@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập từ: </p>
+<input type="text" id="engl">
+<input type="button" onclick="someThing()" value="Dịch">
+<div id="result"></div>
+
+<script>
+    function someThing() {
+        let a = ['table', 'chair', 'mouse', 'cat', 'dog'];
+        let b = ['bàn', 'ghế', 'chuột', 'mèo', 'chó'];
+        let tuDien = document.getElementById("engl").value;
+        for (i = 0; i < a.length; i++) {
+            if (tuDien === a[i]) {
+                document.getElementById('result').innerHTML = b[i]
+                console.log(b[i]);
+                break;
+            } else {
+                document.getElementById('result').innerHTML = 'lỗi';
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

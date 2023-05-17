@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhập số phần từ ');
+    let arr = [];
+    let status = false;
+    for (let i = 0; i < 10; i++) {
+        arr[i] = +prompt('nhập phần từ thứ ' + (i + 1));
+    }
+    let c = +prompt('Nhập số nguyên V')
+    for (let i = 0; i < n; i++) {
+        if (arr[i]===c){
+            status = true
+        }
+    }
+    if (status){
+        document.write('đã tìm thấy ')
+    }else {
+        document.write(' ko tìm thấ ')
+    }
+</script>
+</body>
+</html>

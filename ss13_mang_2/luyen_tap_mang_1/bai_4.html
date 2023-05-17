@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhập số phần từ ');
+    let arr = [];
+
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt('nhập phần từ thứ ' + i);
+    }
+    let first = 0;
+    let last = arr.length - 1;
+    let c = 0;
+    let d = arr.reverse()
+    // for (let i = first, j = last; i < j; i++, j--) {
+    //     c = arr[i];
+    //     arr[i] = arr[j];
+    //     arr[j] = c;
+    // }
+    console.log(d)
+
+</script>
+</body>
+</html>

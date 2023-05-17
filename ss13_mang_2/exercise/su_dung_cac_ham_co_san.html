@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    // Bài 1
+    // let myColor = ["Red", "Green", "White", "Black"];
+    // myColor = ["Red", "Green", "White", "Black"];
+    // console.log(myColor.toString());
+    // console.log(myColor.join());
+    // console.log(myColor.join('+'));
+
+
+    // bài 2
+    // let num = +prompt('Nhập số');
+    // let a = num.toString();
+    // let b = [a[0]];
+    // for (i = 0; i < a.length; i++) {
+    //     if (a[i - 1] % 2 === 0 && a[i] % 2 === 0) {
+    //         b.push('-', a[i]);
+    //     } else {
+    //         b.push(a[i]);
+    //     }
+    // }
+    // document.write(b.join(''))
+
+
+    // bài 3
+    let a = prompt(' Nhập kí tự vào ');
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    for (i = 0; i < a.length; i++) {
+        if (UPPER.indexOf(a[i]) !== -1) {
+            result.push(a[i].toLowerCase());
+        } else if (LOWER.indexOf(a[i]) !== -1) {
+            result.push(a[i].toUpperCase());
+        } else {
+            result.push(a[i]);
+        }
+    }
+    console.log(result.join(''));
+
+
+</script>
+
+</body>
+</html>

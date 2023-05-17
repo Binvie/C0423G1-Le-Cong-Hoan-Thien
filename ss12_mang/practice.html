@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h1>Sample Screen</h1>-->
+<!--<br>-->
+<!--&lt;!&ndash;<input type="number" id="number">&ndash;&gt;-->
+<!--<button onclick="add()">Add</button>-->
+<!--<button onclick=display()>Display</button>-->
+<!--<div id="ketQua"></div>-->
+<!--<script>-->
+<!--    let a = 0;-->
+<!--    let arr = Array();-->
+
+<!--    function add() {-->
+<!--        arr[a] = document.getElementById("number");-->
+<!--        alert('Phần tử '  arr[a]  'đã được thêm vào mảng' + a);-->
+<!--        a++;-->
+<!--        document.getElementById("number") = '';-->
+<!--    }-->
+
+<!--    function display() {-->
+<!--        let e = "<hr/>";-->
+<!--        for (let i = 0; i < arr.length; i++) {-->
+<!--            e += "Element " + i + " = " + arr[i] + "<br/>";-->
+<!--        }-->
+<!--        document.getElementById("ketQua").innerHTML = e;-->
+<!--    }-->
+<script>
+    let x = [-3, 5, 1, 6, 3, 2, 10];
+    let first = 0;
+    let last = x.length - 1;
+
+    let b = 0;
+    while (first < last) {
+        b = x[first];
+        x[first] = x[last];
+        x[last] = b;
+        first++;
+        last--;
+    }
+    document.write(x)
+</script>
+</body>
+</html>
