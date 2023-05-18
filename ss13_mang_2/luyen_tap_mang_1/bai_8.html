@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // let arr = [1, 11, 23, 4, 53, 34, 65, 76, 45, 43];
+    // let brr = []
+    // let c = arr.length ;
+    // for (let i = 0; i < c; i++) {
+    //     let max = arr[0];
+    //     for (let i = 0; i < c ; i++) {
+    //         if (arr[i] > max) {
+    //             max = arr[i]
+    //         } else {
+    //             max
+    //         }
+    //     }
+    //     brr.push(max)
+    //     arr.splice(arr.indexOf(max),1)
+    // }
+    // console.log(brr)
+    // console.log(arr)
+
+    let arr = []
+    for (let i = 0; i < 10; i++) {
+        arr[i] = prompt('Nhập phần tử thứ : ' + (i + 1));
+    }
+    // let arr = [1, 11, 23, 4, 53, 34, 65, 76, 45, 43];
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        max = arr[i];
+        for (let j = i + 1; j <= arr.length; j++) {
+            if (max < arr[j]) {
+                max = arr[j];
+                arr[j] = arr[i];
+                arr[i] = max;
+            }
+        }
+    }
+    console.log(arr)
+
+
+</script>
+</html>

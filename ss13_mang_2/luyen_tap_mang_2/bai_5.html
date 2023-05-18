@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let brr = [];
+    for (let i = 0; i < 3; i++) {
+        arr[i] = +prompt(' nhập phần tử thứ ' + (i + 1));
+    }
+    for (let j = 0; j < 3; j++) {
+        brr[j] = +prompt(' nhập phần tử thứ ' + (j + 1));
+    }
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < brr.length; j++) {
+            if (brr[j] === arr[i]) {
+                count++;
+            }
+        }
+    }
+    if (count === 0) {
+        document.write('2 hàm khác nhau');
+    } else {
+        document.write('2 hàm giống 1 vài phần tử :' + count + ' phần tử ');
+    }
+</script>
+</body>
+</html>

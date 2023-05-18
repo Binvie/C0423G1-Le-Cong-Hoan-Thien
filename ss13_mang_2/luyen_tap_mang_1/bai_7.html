@@ -12,19 +12,18 @@
     for (let i = 0; i < n; i++) {
         arr[i] = +prompt('nhập phần từ thứ ' + (i + 1));
     }
-    let c = +prompt('Nhập số nguyên V')
+    let c = +prompt('Nhập số nguyên V');
     for (let i = 0; i < n; i++) {
-        if (arr[i]===c){
-            index = i
+        if (arr[i] === c) {
+            index = i;
         }
     }
-    if (index !== -1){
-        document.write('đã tìm thấy ')
-    }else {
-        document.write(' ko tìm thấy ')
+    if (index !== -1) {
+        document.write('đã tìm thấy ');
+    } else {
+        document.write('ko tìm thấy ');
     }
-    console.log(arr);
-    arr.splice(index,1);
+    arr.splice(index, 1);
     console.log(arr);
 </script>
 </body>

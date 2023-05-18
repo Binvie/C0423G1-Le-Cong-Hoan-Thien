@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let brr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = +prompt(' nhập phần tử thứ ' + (i + 1));
+    }
+    for (let j = 0; j < 10; j++) {
+        brr[j] = +prompt(' nhập phần tử thứ ' + (j + 1));
+    }
+    let crr = arr.concat(brr);
+    document.write(crr);
+
+</script>
+</body>
+</html>
