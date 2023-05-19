@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h1>Temperature Converter</h1>-->
+<!--<p>-->
+<!--    type a value in the Fahrenheit field to convert to the value to Celcius-->
+<!--    <br> Fahrenheit-->
+<!--    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"-->
+<!--           oninput="tempCon(this.value)"-->
+<!--           onchange="tempCon(this.value)">-->
+<!--</p>-->
+<!--<p>Celsius: <span id="outputCelsius"></span></p>-->
+
+
+<script>
+    function tempCon(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputCelsius").innerHTML = (valNum - 32) / 1.8;
+    }
+
+    // function processConfirm(answer) {
+    //     let result = "";
+    //     if (answer) {
+    //         result = "Excellent. We'll play a nice game of chess.";
+    //     } else {
+    //         result = "Maybe later then.";
+    //     }
+    //     return result;
+    // }
+    //
+    // let confirmAnswer = confirm("Shall we play a game?");
+    // let theAnswer = processConfirm(confirmAnswer);
+    // alert(theAnswer);
+    // function playOrNot(answer) {
+    //     let result ="";
+    //     if (answer){
+    //         result = ' lets go gaau gaau ';
+    //     }else {
+    //         result = 'later'
+    //     }
+    //     return result;
+    // }
+    // let confirmAnswer = confirm(' Wanna play some game ?');
+    // let theAnswer = playOrNot(confirmAnswer);
+    // alert(theAnswer);
+
+    function findMin(arr) {
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+    let arr2 = [7, 12, 6, 9, 20, 56, 89];
+    let arr3 = [];
+    let arr4 = [0, 0, 0, 0, 0, 0]
+    let min = findMin(arr4);
+    alert(min)
+</script>
+</body>
+</html>

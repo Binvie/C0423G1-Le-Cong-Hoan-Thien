@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="ketQua"></div>
+<div id="ketQua2"></div>
+<script>
+    let fit = +prompt('Nhập số foot')
+    let met = +prompt('Nhập số metter')
+
+    function footToMeter(foot) {
+        let m = 0;
+        m = foot * 0.305;
+        return m
+    }
+    document.getElementById("ketQua").innerHTML = fit + ' foot =' + footToMeter(fit) + ' meter <br/>';
+
+    function meterToFoot(meter) {
+        let f = 0;
+        f = meter * 3.279;
+        return f
+    }
+    document.getElementById("ketQua2").innerHTML = met + ' meter =' + meterToFoot(met) + ' foot';
+
+</script>
+</body>
+</html>

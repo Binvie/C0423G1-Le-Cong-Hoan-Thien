@@ -9,19 +9,20 @@
     let n = +prompt('Nhập số phần từ ');
     let arr = [];
 
-    let sum=0;
-    for (let i = 0; i < n ; i++) {
-        arr[i] = +prompt('Nhập phần tử '+(i+1));
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt('Nhập phần tử ' + (i + 1));
         sum += arr[i]
-    }document.write('Giá trị trung bình của các phần tử trong mảng là '+ sum/n + '<br/>');
+    }
+    document.write('Giá trị trung bình của các phần tử trong mảng là ' + sum / n + '<br/>');
     let max = arr[0];
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i]>max){
+        if (arr[i] > max) {
             max = arr[i];
         }
 
     }
-    document.write('Phần tử có giá trị lớn nhất là '+ max);
+    document.write('Phần tử có giá trị lớn nhất là ' + max);
 </script>
 </body>
 </html>

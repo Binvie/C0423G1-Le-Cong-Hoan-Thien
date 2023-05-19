@@ -9,12 +9,17 @@
     let arr = [];
     let brr = [];
     for (let i = 0; i < 10; i++) {
-        arr[i] = +prompt(' nhập phần tử thứ ' + (i + 1));
+        do {
+            arr[i] = prompt(' nhập phần tử thứ ' + (i + 1));
+        } while (isNaN(arr[i]));
     }
     for (let j = 0; j < 10; j++) {
-        brr[j] = +prompt(' nhập phần tử thứ ' + (j + 1));
+        do {
+            brr[j] = +prompt(' nhập phần tử thứ ' + (j + 1));
+        } while (isNaN(brr[j]));
     }
-    let crr = arr.concat(brr);
+    let crr;
+    crr = arr.concat(brr);
     document.write(crr);
 
 </script>
