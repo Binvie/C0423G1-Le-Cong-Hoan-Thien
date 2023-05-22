@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt(' Nhập vào 1 mảng bất kì : ');
+    let m = prompt(' Nhập vào kí tự bất kì ');
+    let arr = n.split('');
+    let count = 0;
+
+    function change(a) {
+        for (let i = 0; i < n.length; i++) {
+            if (m === arr[i]) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            alert('giá trị ' + m + ' xuất hiện ' + count + ' lần');
+        } else {
+            alert('-1');
+        }
+    }
+
+    change(n);
+</script>
+</body>
+</html>

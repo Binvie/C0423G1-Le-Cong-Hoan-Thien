@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt('nhập mảng số nguyên bất kì ');
+    let arr = n.split('');
+    let first = 0;
+    let last = arr.length - 1;
+    let a = 0;
+
+    function reverse(b) {
+        for (let i = 0; i <= last; i++) {
+            a = arr[last];
+            arr[last] = arr[first];
+            arr[first] = a;
+            first++;
+            last--;
+        }
+        return arr;
+    }
+    document.write(reverse(n));
+</script>
+</body>
+</html>
