@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let star = prompt('Nhập vào sao mà bạn muốn tìm chòm sao của nó : ');
+    let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let flag = false;
+
+    function someThing() {
+        for (let i = 0; i < a.length; i++) {
+            if (star === a[i]) {
+               let result = b[i];
+                return alert(' sao ' + star + ' thuộc chòm sao ' + result);
+                flag = true;
+                break;
+            }
+        }
+        if (flag === false) {
+            return alert(' không tìm thấy chòm sao của sao bạn muốn');
+        }
+    }
+     someThing(star);
+</script>
+</body>
+</html>
