@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt('Nhập 3 số');
+
+    function small(a) {
+        let arr = a.split("");
+        let min = arr[0];
+        for (let i = 0; i < 3; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    document.write(small(n))
+</script>
+</body>
+</html>

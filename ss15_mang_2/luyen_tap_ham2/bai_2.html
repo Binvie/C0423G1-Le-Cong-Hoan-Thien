@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function circle(a) {
+        return 3.14 * a * a;
+    }
+    function chuVi(a){
+        return 2 * 3.14 * a;
+    }
 
+    let n = +prompt('Nhập bán kính :');
+    document.write('Diện tích hình tròn là :' +  circle(n) + '<br/>');
+    document.write('chu vi hình tròn là :' + chuVi(n).toFixed(2));
+
+</script>
 </body>
 </html>
