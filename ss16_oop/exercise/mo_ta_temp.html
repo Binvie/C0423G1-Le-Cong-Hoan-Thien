@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(temp) {
+            this.temp = temp;
+        }
+
+        doCtodoF() {
+            return 'Độ F là : ' + (this.temp * 1.8 + 32);
+        }
+
+        doCtodoK() {
+            return 'Độ K là : ' + (this.temp - 273.15);
+        }
+    }
+
+    let a = new Temperature(25);
+    document.write(a.doCtodoF() + '<br/>' + a.doCtodoK());
+</script>
+</body>
+</html>
