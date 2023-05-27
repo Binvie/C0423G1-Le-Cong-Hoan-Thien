@@ -5,70 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-<div>
-    <input type="text" id="idIpt" placeholder="Nhập id">
-    <input type="text" id="nameIpt" placeholder="Nhập tên sản phẩm">
-    <input type="text" id="priceIpt" placeholder="Giá">
-    <button onclick="addNewProduct()">Thêm sản phẩm</button>
-</div>
-<hr>
-<div id="tableProduct"></div>
 <script>
-    // quy ước: sản phẩm sẽ có các thông tin bản: id, name, price
-    // CRUD
-    class Product {
-        constructor(id, name, price) {
-            this.id = id;
-            this.name = name;
-            this.price = price;
+    function staircase(n) {
+        for (let i=1; i<=n ; i++){
+            for (let j=1; j<=n;j++){
+                if(j<= n - i){
+                    document.write('&nbsp;&nbsp');
+                }else {
+                    document.write('#');
+                }
+            }
+            document.write('<br>')
         }
     }
-    let product1 = new Product(1, "Iphone", 1000);
-    let product2 = new Product(2, "Nokia", 100);
-    let product3 = new Product(3, "Samsung", 500);
-    let productList = [];
-    productList.push(product1, product2, product3);
-    displayProductList(productList);
-    function displayProductList(list) {
-        let tableStr = "<table border='1' style='border-collapse: collapse'>";
-        // ở giữa sẽ là để vẽ các thành phần của table.
-        tableStr += "<tr> " +
-            "<th> # </th>" +
-            "<th> Tên sản phẩm </th>" +
-            "<th> Giá ($) </th>" +
-            "<th> Thao tác </th>" +
-            " </tr>";
-        for (let i = 0; i < list.length; i++) {
-            tableStr += "<tr>";
-            tableStr += "<td>" + (i + 1) + "</td>";
-            tableStr += "<td>" + list[i].name + "</td>";
-            tableStr += "<td>" + list[i].price + "</td>";
-            tableStr += "<td>" + "<button onclick='deleteProduct(" + i + ")'>Xoá</button>" + "</td>";
-            tableStr += "</tr>";
-        }
-        tableStr += "</table>";
-        document.getElementById("tableProduct").innerHTML = tableStr;
-    }
-    function addNewProduct() {
-        // B1: thu thập các thông tin từ các ô input.
-        // B2: Khởi tạo đối tượng product
-        // B3: Thêm vào mảng
-        // B4: hiển thị ra
-        let id = document.getElementById("idIpt").value;
-        let name = document.getElementById("nameIpt").value;
-        let price = document.getElementById("priceIpt").value;
-        let newProduct = new Product(id, name, price);
-        productList.push(newProduct);
-        displayProductList(productList);
-        document.getElementById("idIpt").value = "";
-        document.getElementById("nameIpt").value = "";
-        document.getElementById("priceIpt").value = "";
-    }
-    function deleteProduct(indexProduct) {
-        alert("index: " + indexProduct);
-        productList.splice(indexProduct, 1);
-        displayProductList(productList);
-    }
+
+    console.log(staircase(6))
+
+
 </script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhập số lương tháng này : ');
+    if (n >= 15000000) {
+        alert(`Số tiền lương thực nhận : ${n - (n * 20 / 100)} `);
+        alert(`Số tiền thuế : ${n * 20 / 100} `);
+    } else if (n > 7000000) {
+        alert(`Số tiền lương thực nhận : ${n - (n * 10 / 100)} `);
+        alert(`Số tiền thuế : ${n * 20 / 100} `);
+    } else if (n < 7000000 && n > 0) {
+        alert(`Số tiền lương thực nhận : ${n - (n * 5 / 100)} `);
+        alert(`Số tiền thuế : ${n * 20 / 100} `);
+    }
+</script>
+
+</body>
+</html>

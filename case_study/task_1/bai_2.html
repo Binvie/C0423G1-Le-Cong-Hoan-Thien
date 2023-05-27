@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt('Nhập 1 kí tự bất kì ');
+    let flag = false;
+    let arr = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
+    for (let i = 0; i < arr.length; i++) {
+        if (n === arr[i]) {
+            flag = true;
+            // }else {
+            //     alert(`${n} là kí tự phụ âm`);
+        }
+    }
+    if (flag === true) {
+        alert(n + ' là kí tự nguyên âm');
+    } else {
+        alert(n + ' là kí tự phụ âm');
+    }
+</script>
+</body>
+</html>

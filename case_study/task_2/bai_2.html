@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt('nhập độ dài của cạnh tam giác :');
+        let result = "";
+        for(let i = 0 ; i <= n ; i++) {
+            for(j = n ; j >= i ; j--) {
+                result += "&nbsp;&nbsp";
+            }
+            for(j = 1 ; j <= i ; j++) {
+                result += "*" + "&nbsp;&nbsp";
+            }
+            result += "<br/>";
+        }
+document.write(result)
+
+</script>
+</body>
+</html>
