@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let arr = prompt('Nhập 1 xâu kí tự : ');
+    let arr1 = [];
+    arr = arr.split('');
+    for (let i = 0; i < arr.length; i++) {
+        if (arr1.indexOf(arr[i]) === -1) {
+            arr1.push(arr[i]);
+        }
+    }
+    document.write(arr1.length);
+</script>
 </body>
 </html>

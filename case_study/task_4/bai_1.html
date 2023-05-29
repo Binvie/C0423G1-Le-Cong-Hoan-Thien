@@ -9,11 +9,15 @@
     let arr = prompt('Nhập sâu kí tự : ');
     let finalResult = [];
     let max = 0;
-    let firstLetter = ''
+    let index = 0;
+    let firstLetter = '';
     arr = arr.split(' ');
     for (let i = 0; i < arr.length; i++) {
         arr[i] = arr[i].toLowerCase();
-        console.log(arr[i].length)
+        if (max < arr[i].length) {
+            max = arr[i].length;
+            index = i;
+        }
         if (arr[i] === ' ') {
             continue;
         } else {
@@ -22,8 +26,16 @@
         }
     }
     document.write(finalResult.trim());
-    document.write()
+    document.write('<br/>' + arr[index]);
 
+    let arr = 'tRuong TaN HAI';
+    arr = arr.split(' ');
+    let arr1 = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== ''){
+            arr1.push(arr)
+        }
+    }
 </script>
 </body>
 </html>
