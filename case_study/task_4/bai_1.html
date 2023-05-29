@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = prompt('Nhập sâu kí tự : ');
+    let finalResult = [];
+    let max = 0;
+    let firstLetter = ''
+    arr = arr.split(' ');
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].toLowerCase();
+        console.log(arr[i].length)
+        if (arr[i] === ' ') {
+            continue;
+        } else {
+            firstLetter = arr[i].charAt(0).toUpperCase();
+            finalResult += firstLetter + arr[i].slice(1) + ' ';
+        }
+    }
+    document.write(finalResult.trim());
+    document.write()
+
+</script>
+</body>
+</html>

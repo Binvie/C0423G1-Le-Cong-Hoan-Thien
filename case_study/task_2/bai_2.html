@@ -7,17 +7,17 @@
 <body>
 <script>
     let n = prompt('nhập độ dài của cạnh tam giác :');
-        let result = "";
-        for(let i = 0 ; i <= n ; i++) {
-            for(j = n ; j >= i ; j--) {
-                result += "&nbsp;&nbsp";
-            }
-            for(j = 1 ; j <= i ; j++) {
-                result += "*" + "&nbsp;&nbsp";
-            }
-            result += "<br/>";
+    let result = "";
+    for (let i = 0; i <= n; i++) {
+        for (j = n; j >= i; j--) {
+            result += "&nbsp;&nbsp";
         }
-document.write(result)
+        for (j = 1; j <= i; j++) {
+            result += "*" + "&nbsp;&nbsp";
+        }
+        result += "<br/>";
+    }
+    document.write(result);
 
 </script>
 </body>
