@@ -25,10 +25,10 @@
     }
 
     let studentsList = [];
-    // let stu1 = new Students('HV=0001', 'Nguyễn Văn A', '2', '5', '6', '0');
-    // studentsList.push(stu1)
-    // // document.getElementById("table").innerHTML = tableStr
-    // displayList(studentsList)
+    let stu1 = new Students('HV-0001', 'Nguyễn Văn A', '2', '5', '6', '0');
+    studentsList.push(stu1)
+    // document.getElementById("table").innerHTML = tableStr
+    displayList(studentsList)
 
 
     function displayList(list) {
@@ -68,17 +68,29 @@
     }
 
     function editStudent() {
-        let editId = prompt('Sửa mã sinh viên : (cú pháp: HV-0001)');
-        let editName = prompt('Sửa tên sinh viên :');
-        let editClass = prompt('Sửa lớp');
-        let editEmail = prompt('Sửa email)');
-        let editDob = prompt('Sửa ngày sinh ');
-        let editModule = prompt('Sửa khóa học ');
+        let n = prompt('Nhập mã sinh viên mà bạn muốn sửa :')
+        for (let i = 0; i < studentsList.length; i++) {
+            if (n === studentsList[i].id) {
+                studentsList[i].id = prompt('Sửa mã sinh viên : (cú pháp: HV-0001)');
+                studentsList[i].name = prompt('Sửa tên sinh viên :');
+                studentsList[i].lop = prompt('Sửa lớp');
+                studentsList[i].email = prompt('Sửa email)');
+                studentsList[i].dateOfBirth = prompt('Sửa ngày sinh ');
+                studentsList[i].module = prompt('Sửa khóa học ');
 
+            }
+        }
+        displayList(studentsList);
     }
 
     function deleteStudent() {
-
+        let m = prompt('Nhập mã sinh viên bạn muốn xóa:')
+        for (let i = 0; i < studentsList.length; i++) {
+            if (m === studentsList[i].id) {
+                studentsList.splice(i, 1);
+            }
+        }
+        displayList(studentsList);
     }
 
 </script>
