@@ -62,10 +62,11 @@
         let studentEmail = prompt('Nhập email)');
         let studentDob = prompt('Nhập ngày sinh ');
         let studentModule = prompt('Nhập khóa học ');
-        let newStudent = new Students(studentId,studentName,studentClass,studentEmail,studentDob,studentModule);
+        let newStudent = new Students(studentId, studentName, studentClass, studentEmail, studentDob, studentModule);
         studentsList.push(newStudent);
-        displayList(studentsList)
+        displayList(studentsList);
     }
+
     function editStudent() {
         let editId = prompt('Sửa mã sinh viên : (cú pháp: HV-0001)');
         let editName = prompt('Sửa tên sinh viên :');
