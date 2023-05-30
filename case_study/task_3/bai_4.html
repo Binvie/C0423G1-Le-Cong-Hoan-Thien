@@ -6,22 +6,30 @@
 </head>
 <body>
 <script>
-    let n = 0;
+    let choice = 0;
+    let price = [10, 15, 20, 25, 30, 35]
+    let amount;
+    let total = 0;
+    let arr = [];
+    let finalTotal = 0;
     do {
-        n = +prompt(' Danh sách các loại thức uống:\n 1 (cafe)\n 2 (cam' +
+        choice = +prompt(' Danh sách các loại thức uống:\n 1 (cafe)\n 2 (cam' +
             'vắt)\n 3 (nước ép cà rốt)\n 4 (nước ép cà' +
             'chua)\n 5 (nước lọc)\n 6 (nước dừa)\n 7 (thoát ' +
             ' gọi món)');
-        if (n === 7) {
-            break;
+        if (choice < 7 && choice > 0) {
+            amount = +prompt('Nhập số lượng bạn muốn order :');
+            total = amount * price[amount - 1];
+            alert(`bạn đã order với số lượng là ${amount} với tổng tiền là ${total} k `);
+            arr.push(total);
         }
+    } while (choice !== 7);
+    for (let i = 0; i < arr.length; i++) {
+        finalTotal += arr[i];
     }
-    while (n > 7);
-    if (n < 7) {
-        let number = +prompt('Xin hãy nhập số lượng bạn muốn order');
-        let sum = number * 10000;
-        alert('Tổng thiệt hại của bạn là ' + sum);
-    }
+    alert('Tổng tiền cần phải trả là :' + finalTotal);
+
+
 </script>
 </body>
 </html>
