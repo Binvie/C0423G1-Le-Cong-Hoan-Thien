@@ -5,6 +5,42 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let a = +prompt(' nhập vào số phần tử trong mảng lớn ');
+    let b = +prompt(' nhập vào số phần tử trong mảng bé ');
+    let arr = [];
+    let countFinal = 0;
+    for (let i = 0; i < a; i++) {
+        arr [i] = [];
+        for (let j = 0; j < b; j++) {
+            arr[i][j] = +prompt(`nhập phần tử thứ arr[${i}][${[j]}]`);
+            prime(arr[i][j]);
+        }
+    }
 
+    function prime(n) {
+        let count = 0;
+        for (let i = 1; i <= n; i++) {
+            if (n % i === 0) {
+                count++;
+            }
+        }
+        if (count === 2) {
+            document.write(n + ' ');
+        }
+    }
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = 1; j < arr[i].length; j++) {
+    //         if (arr[i][j] % arr[i][j] === 0) {
+    //             count++;
+    //             if (count === 1) {
+    //                 countFinal++;
+    //             }
+    //         }
+    //     }
+    // }
+
+</script>
 </body>
 </html>

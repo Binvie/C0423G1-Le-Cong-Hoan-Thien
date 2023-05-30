@@ -5,6 +5,32 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let a = +prompt(' nhập vào số phần tử trong mảng lớn ');
+    let b = +prompt(' nhập vào số phần tử trong mảng bé ');
+    let arr = [];
+    let max = 0;
 
+    for (let i = 0; i < a; i++) {
+        arr [i] = [];
+        for (let j = 0; j < b; j++) {
+            arr[i][j] = +prompt(`nhập phần tử thứ arr[${i}][${[j]}]`)
+        }
+    }
+    // debugger
+    let min = arr[0][0];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (max < arr[i][j]) {
+                max = arr[i][j];
+            }
+            if (min > arr[i][j]) {
+                min = arr[i][j];
+            }
+        }
+    }
+    console.log(max);
+    console.log(min);
+</script>
 </body>
 </html>
