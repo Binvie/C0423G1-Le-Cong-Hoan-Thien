@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="text-align: center">Bảng thông tin các loại máy tính</h1>
+<hr>
+<input type="text" id="id" placeholder="nhập id">
+<input type="text" id="name" placeholder="nhập tên máy">
+<input type="text" id="brand" placeholder="nhập tên hãng sản xuất">
+<input type="text" id="price" placeholder="Nhập giá bán">
+<button onclick="addComputer()">Thêm máy tính</button>
+<div id="tableComputer"></div>
+<script>
+    let computerList = []
+    class Computer {
+        constructor(id,name,brand,price) {
+            this.id = id;
+            this.name = name;
+            this.brand = brand;
+            this.price = price;
+        }
+    }
+    function displayList(list) {
+        let table = `<table border="1">
+            <tr>
+            <th>Mã máy</th>
+            <th>Tên máy</th>
+            <th> Tên hãng sản xuất</th>
+            <th> Giá bán</th>
+            </tr>
+        `
+    for (let i = 0; i <list.length ; i++) {
+            table += `<tr>
+            <td>${list[i].id}</td>
+            <td>${list[i].name}</td>
+            <td>${list[i].brand}</td>
+            <td>${list[i].price}</td>
+            </tr>`
+        }
+    table += `</table>`
+        document.getElementById("tableComputer").innerHTML = table;
+    }
+    let com1 = new Computer('1','thien','d','d')
+    computerList.push(com1);
+    displayList(computerList);
+    function addComputer(list) {
+        computerList.id = document.getElementById("id").value;
+        computerList.name = document.getElementById("name").value;
+        computerList.brand = document.getElementById("brand").value;
+        computerList.price = document.getElementById("price").value;
+        let newComputer = new Computer(computerList.id,computerList.name,computerList.brand,computerList.price)
+        computerList.push(newComputer)
+        displayList(computerList)
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('nhập vào chiều dài mảng số nguyên (chiều dài của mảng bé hơn 50) :');
+    if (n > 50) {
+        n = +prompt('Mời bạn nhập lại chiều dài của mảng :')
+    }
+    let arr = [];
+    let arr1 = [];
+    let result = 0;
+    let number = 0;
+    for (let i = 0; i < n; i++) {
+        number = +prompt('Nhập vào phần tử thứ :' + (i + 1));
+        arr.push(number);
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 5 === 0 && i % 3 === 0) {
+            arr1.push(arr[i]);
+        }
+    }
+    for (let i = 0; i < arr1.length; i++) {
+        result += arr1[i];
+    }
+    console.log(arr);
+    console.log(result / arr1.length);
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let result = '';
+    let n = prompt('Nhập vào 1 chuỗi mà bạn muốn viết tắt :');
+    let arr1 = [];
+    vietTat(n)
+    function vietTat(n) {
+        n = n.split(' ');
+        if (n.length <= 1) {
+            alert('Chuỗi chỉ có 1 từ nên ko cần viết tắt :');
+        }
+        for (let i = 0; i < n.length; i++) {
+            if (n[i] === '') {
+                continue;
+            } else {
+                n[i][0] = n[i][0].toUpperCase();
+                arr.push(n[i][0]);
+            }
+        }
+
+        result = arr.join("");
+        result = result.toUpperCase();
+        document.write(result);
+    }
+
+
+    // function vietTat(n) {
+    //     n = n.split(' ');
+    //     for (let i = 0; i < n.length; i++) {
+    //         if (n[i] !== '') {
+    //             arr.push(n[i]);
+    //         }
+    //     }
+    //     if (arr.length === 1) {
+    //         alert('Chuỗi chỉ có 1 từ nên không cần viết tắt')
+    //     } else {
+    //         for (let i = 0; i < arr.length; i++) {
+    //             arr1.push(arr[i][0].toUpperCase());
+    //         }
+    //     }
+    //     arr1 = arr1.join('');
+    // }
+    //
+    // vietTat(n);
+    // console.log(arr1);
+
+
+    // vietTat(n)
+
+
+</script>
+</body>
+</html>

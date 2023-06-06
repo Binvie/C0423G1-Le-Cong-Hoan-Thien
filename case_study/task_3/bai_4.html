@@ -19,15 +19,14 @@
             ' gọi món)');
         if (choice < 7 && choice > 0) {
             amount = +prompt('Nhập số lượng bạn muốn order :');
-            total = amount * price[amount - 1];
+            total = amount * price[choice - 1];
             alert(`bạn đã order với số lượng là ${amount} với tổng tiền là ${total} k `);
             arr.push(total);
+            finalTotal += total;
         }
     } while (choice !== 7);
-    for (let i = 0; i < arr.length; i++) {
-        finalTotal += arr[i];
-    }
-    alert('Tổng tiền cần phải trả là :' + finalTotal);
+
+    alert('Tổng tiền cần phải trả là :' + finalTotal +'k');
 
 
 </script>

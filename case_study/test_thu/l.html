@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hệ Thông quản lý học sinh tiểu học</h1>
+<br>
+<hr>
+<br>
+<button onclick="addStudent()">thêm</button>
+<button onclick="changeStudent(studentList)">sửa</button>
+<button onclick="removeStudent()">xóa</button>
+<div id="table"></div>
+
+
+<script>
+    class Student {
+        constructor(id, name, grade) {
+            this.id = id;
+            this.name = name;
+            this.grade = grade;
+        }
+
+        getId() {
+            return;
+        }
+
+        setId() {
+            this.id = id;
+        }
+
+        getName() {
+            return;
+        }
+
+        setName() {
+            this.name = name;
+        }
+
+        getGrade() {
+            return;
+        }
+
+        setGrade() {
+            this.grade = grade;
+        }
+        toString(){
+            alert(`học sinh ${this.id} tên ${this.name} học lớp ${this.grade}`)
+        }
+    }
+
+    let studentList = [];
+
+    function displayList(list) {
+        let table = `
+        <table border="1" style="border-collapse: collapse">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>grade</th>
+            </tr>
+        `
+        for (let i = 0; i < list.length; i++) {
+            table += `
+                <tr>
+                    <td>${list[i].id}</td>
+                    <td>${list[i].name}</td>
+                    <td>${list[i].grade}</td>
+                </tr>
+            `
+        }
+        table += `</table>`
+        document.getElementById("table").innerHTML = table;
+    }
+
+    let student1 = new Student(1, 'thien', 1)
+    let student2 = new Student(2, 'whatup', 2)
+    let student3 = new Student(3, 'eyyo', 3)
+    studentList = [student1, student2, student3];
+    displayList(studentList);
+
+    function addStudent() {
+        let id = prompt('nhập id :')
+        let name = prompt('nhập tên học sinh :')
+        let grade = prompt('nhập lớp :')
+        let newStudent = new Student(id, name, grade);
+        studentList.push(newStudent);
+        displayList(studentList);
+    }
+
+    function removeStudent() {
+        let n = +prompt('Nhập vào lớp mà bạn muốn xóa')
+        let flag = false;
+        debugger;
+        for (let i = 0; i < studentList.length; i++) {
+            if (n === studentList[i].grade) {
+                if (confirm("ban mun xoa " + studentList[i].name)) {
+                    studentList.splice(i, 1);
+                    flag = false;
+                    break;
+                } else break;
+            } else {
+                flag = true;
+            }
+        }
+        if (flag) {
+            alert(' ko có lớp bạn muốn xóa');
+        }
+        displayList(studentList)
+    }
+
+    function changeStudent(arr) {
+        let n = prompt('nhập lớp mà bạn muốn edit');
+        let flag = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (n === arr[i].grade) {
+                arr[i].id = prompt('nhập lại id');
+                arr[i].name = prompt('nhập lại name');
+                arr[i].grade = prompt('nhập lại grade');
+                flag = false;
+                break;
+            }else {
+                flag = true;
+            }
+        }
+        if (flag === true){
+            alert(' ko có học viên này')
+        }
+        displayList(studentList);
+    }
+</script>
+</body>
+</html>
